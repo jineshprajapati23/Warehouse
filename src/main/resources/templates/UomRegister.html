@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>UOM Register Page</h3>
+<form action="save" method="post">
+
+	<pre>
+	
+	UOM Type : <select name="uomtype">
+				
+				<option selected="selected" value="">----selected-----</option>
+				<option  value="Packing">Packing</option>
+				<option  value="No Packing">No Packing</option>
+				<option  value="NA">--NA--</option>
+	
+			   </select>
+			   
+	UOM Model : <input type="text" name="uommodel"/>
+	
+	Description : <textarea rows="" cols="" name="uomdescription" ></textarea>
+	
+	<input type="submit" value="CREATE UOM"/>
+	
+	</pre>
+	
+</form>
+
+<p th:text="${uomMessage}">
+
+</body>
+</html>
