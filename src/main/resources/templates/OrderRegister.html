@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="ISO-8859-1">
+<title>Order Register Page</title>
+</head>
+<body>
+
+<form action="save" method="post">
+
+	<pre>
+	
+	Order Model : <input  type="radio" value="Sale" name="orderMode"/>Sale <input  type="radio" value="Purchase" name="orderMode"/>Purchase 
+			   
+	Order Code : <input type="text" name="orderCode"/>
+	
+	Order Method : <select name="orderMethod">
+	
+						<option selected="selected">---select---</option>
+						<option>FIFO</option>
+						<option>LIFO</option>
+						<option>FCFO</option>
+						<option>FEFO</option>
+				
+				   </select>
+				   
+	Order Accepted : <input type="checkbox" name="orderAccepted" value="Multi-Model"/>Multi-Model
+					 <input type="checkbox" name="orderAccepted" value="Accept Return"/>Accept Return
+	
+	Description : <textarea rows="" cols="" name="orderDescription" ></textarea>
+	
+	<input type="submit" value="CREATE ORDER METHOD"/>
+	
+	</pre>
+	
+</form>
+
+<p th:text="${orderMessage}">
+
+
+</body>
+</html>
