@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="ISO-8859-1">
+<title>Shipment Register Page</title>
+</head>
+<body><form action="save" method="post">
+
+	<pre>
+	
+	Shipment Mode : <select name="shipmentMode">
+	
+						<option selected="selected">---select---</option>
+						<option value="Air">Air</option>
+						<option value="Truck">Truck</option>
+						<option value="Ship">Ship</option>
+						<option value="Train">Train</option>
+				
+				   </select>
+			   
+	Shipment Code : <input type="text" name="shipmentCode"/>
+	
+	Enable Shipment : <input  type="radio" value="Yes" name="enableShipment"/>Yes  <input  type="radio" value="No" name="enableShipment"/>No 
+	
+	Shipment Grade : <input  type="radio" value="A" name="shipmentGrade"/>A  <input  type="radio" value="B" name="shipmentGrade"/>B    <input  type="radio" value="C" name="shipmentGrade"/>C    
+	
+	
+	Description : <textarea rows="" cols="" name="shipmentDescription" ></textarea>
+	
+	<input type="submit" value="CREATE SHIPMENT"/>
+	
+	</pre>
+	
+</form>
+
+<p th:text="${shipmentMessage}">
+
+</body>
+</html>
